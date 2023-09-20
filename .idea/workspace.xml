@@ -7,9 +7,6 @@
     <list default="true" id="f44a0602-50f6-4883-866b-3dd9c0952a2e" name="Changes" comment="category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ruiji/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruiji/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ruiji/mapper/CategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruiji/mapper/CategoryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ruiji/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/ruiji/entity/Category.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +142,7 @@
       <workItem from="1694834486038" duration="2587000" />
       <workItem from="1694871314113" duration="1232000" />
       <workItem from="1695042060985" duration="23018000" />
-      <workItem from="1695114791812" duration="9991000" />
+      <workItem from="1695114791812" duration="11786000" />
     </task>
     <task id="LOCAL-00001" summary="一次尝试">
       <created>1694437572644</created>
@@ -168,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695173616796</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="category">
+      <created>1695175860699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695175860699</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +198,36 @@
             </State>
           </value>
         </entry>
+        <entry key="a8407929-5170-40bd-9fda-f0303bf8d208">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/ruiji/src/main/java/org/example/ruiji/mapper" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="a8407929-5170-40bd-9fda-f0303bf8d208" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
