@@ -1,5 +1,6 @@
 package org.example.ruiji.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.example.ruiji.entity.Category;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author 崔淼
  * @since 2023-09-20
  */
+@Mapper
 public interface CategoryMapper extends BaseMapper<Category> {
 
 }
