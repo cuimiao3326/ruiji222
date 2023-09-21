@@ -8,6 +8,7 @@ import org.apache.commons.lang.StringUtils;
 import org.example.ruiji.common.R;
 import org.example.ruiji.entity.Category;
 import org.example.ruiji.service.ICategoryService;
+import org.example.ruiji.service.impl.CategoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,6 +45,21 @@ public class CategoryController {
         //执行查询
         iCategoryService.page(categoryPage,categoryLambdaQueryWrapper);
         return R.success(categoryPage);
+    }
+
+    /**
+     * 删除菜品分类，除非和Dish表、Setmeal表关联
+     * @param ids
+     * @return
+     */
+    @DeleteMapping
+    public R<String> delete(Long ids){
+        log.info("根据id删除菜品分类");
+//        iCategoryService.removeById(id);
+
+        iCategoryService.select(ids);
+
+        return R.success("删除成功");
     }
 
 }

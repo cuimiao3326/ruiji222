@@ -1,6 +1,7 @@
 package org.example.ruiji.exception;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.ruiji.common.DuplicateException;
 import org.example.ruiji.common.R;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -21,5 +22,17 @@ public class ControllerExceptionHandler {
 
         }
         return R.error("未知错误");
+    }
+
+    /**
+     * 解决菜单分类和菜品或者套餐关联时抛出异常后，进行全局处理的方法
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler(DuplicateException.class)
+    public R<String> capture(DuplicateException exception){
+        log.error(exception.getMessage());
+
+        return R.error(exception.getMessage());
     }
 }

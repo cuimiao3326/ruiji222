@@ -12,5 +12,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-09-20
  */
 public interface ICategoryService extends IService<Category> {
+    void select(Long id);
 
 }
