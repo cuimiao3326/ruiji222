@@ -12,6 +12,8 @@ import org.example.ruiji.service.impl.CategoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * <p>
  * 菜品及套餐分类 前端控制器
@@ -56,10 +58,28 @@ public class CategoryController {
     public R<String> delete(Long ids){
         log.info("根据id删除菜品分类");
 //        iCategoryService.removeById(id);
-
         iCategoryService.select(ids);
-
         return R.success("删除成功");
     }
 
+
+    @PutMapping
+    public R<String> update(@RequestBody Category category){
+        log.info("更新菜品分类的信息");
+        iCategoryService.updateById(category);
+        return R.success("更新成功");
+    }
+
+    @GetMapping("/list")
+    public R<List<Category>> listCategory(Category category){
+        log.info("在添加菜品页面的下拉框中展示可选的菜品分类");
+        LambdaQueryWrapper<Category> categoryLambdaQueryWrapper = new LambdaQueryWrapper<Category>()
+                .eq(category.getType() != null, Category::getType, category.getType())
+                .orderByAsc(Category::getSort)
+                .orderByDesc(Category::getUpdateTime);
+
+        List<Category> list = iCategoryService.list(categoryLambdaQueryWrapper);
+        return R.success(list);
+
+    }
 }

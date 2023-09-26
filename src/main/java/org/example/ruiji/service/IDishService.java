@@ -1,5 +1,6 @@
 package org.example.ruiji.service;
 
+import org.example.ruiji.dto.DishDto;
 import org.example.ruiji.entity.Dish;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IDishService extends IService<Dish> {
 
+    void saveWithFlavor(DishDto dishDto);
+
+    DishDto showBack(Long id);
+
+    void updateWithFlavor(DishDto dishDto);
 }
